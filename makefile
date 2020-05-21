@@ -1,5 +1,5 @@
 
-readme:
+readme: guessinggame.sh
 	touch README.md
 
 	echo "# Final exercise for Coursera Unix Workbench class" > README.md
