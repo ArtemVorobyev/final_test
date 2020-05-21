@@ -1,6 +1,6 @@
 echo "welcome in my quessing game!!!"
 
-filenumber=$(ls -a -p | grep "/" -v | wc -l)
+filenumber=$(ls -A | wc -l)
 
 echo "try to guess how many files are in the folder"
 
@@ -9,7 +9,7 @@ function asking {
 	
 	if [[ $response =~ [^0-9] ]]
 	then 
-	echo "the response should be a number"
+	echo "it should be a number"
 	
 	elif [[ $response -gt $filenumber ]]
 	then
@@ -21,9 +21,10 @@ function asking {
 	then 
 	echo "Congratulations!!! Correct"	
 	fi
+	
 }
 
-while [[ $response -ne $filenumber ]]
+while [[ $response != $filenumber ]]
 do
 	asking
 done
